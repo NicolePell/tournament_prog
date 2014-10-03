@@ -1,0 +1,15 @@
+<body>
+
+<h1>Welcome to the Makers TTT</h1>
+
+<form action="/sign_up" method= "post">
+What's your name? <input type="text" name="name"/>
+<input type="submit" value="Register"/>
+</form>
+
+<%if @name %>
+Thank you for registering, <%= @name %>
+<% end %>
+
+
+</body>

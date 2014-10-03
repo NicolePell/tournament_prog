@@ -1,9 +1,13 @@
-body { background-color: rgb(102, 205, 170);
+ul {
+  margin: 0;
+  padding: 0;
 }
 
-nav { position: fixed;
-  top: 0em;
-  z-index: 10;
+li { display: inline-block; 
+  list-style-type: none;
+}
+
+body { background-color: salmon;
 }
 
 h1 { color: white;
@@ -20,12 +24,14 @@ table {
   border: none;
   font: small arial, helvetica, sans-serif;
 }
+
 td {
   vertical-align: middle;
   width: 10em;
   margin: 0;
   padding: 0;
 }
+
 td p {
   border-bottom: solid 1px black;
   margin: 0;

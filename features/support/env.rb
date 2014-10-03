@@ -2,20 +2,20 @@
 
 ENV['RACK_ENV'] = 'test'
 
-# require File.join(File.dirname(__FILE__), '..', '..', 'lib/tournament.rb')
+require File.join(File.dirname(__FILE__), '..', '..', 'lib/tournament.rb')
 
 require 'capybara'
 require 'capybara/cucumber'
 require 'rspec'
 
-Capybara.app = table_tennis_tourny
+Capybara.app = TableTennisTourny
 
-class table_tennis_tournyWorld
+class TableTennisTournyWorld
   include Capybara::DSL
   include RSpec::Expectations
   include RSpec::Matchers
 end
 
 World do
-  table_tennis_tournyWorld.new
+  TableTennisTournyWorld.new
 end
