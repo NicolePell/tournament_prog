@@ -1,3 +1,20 @@
+body { background-color: rgb(102, 205, 170);
+}
+
+nav { position: fixed;
+  top: 0em;
+  z-index: 10;
+}
+
+h1 { color: white;
+  font-family: helvetica, sans-serif;
+}
+
+p { color: white;
+  font-family: helvetica, sans-serif;
+
+}
+
 table {
   border-collapse: collapse;
   border: none;

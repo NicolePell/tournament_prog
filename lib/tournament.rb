@@ -1,7 +1,9 @@
 require 'sinatra/base'
 
-class TableTennisTourny < Sinatra::Base
-	# set :views, Proc.new { File.join(root, "..", "views") }
+class TableTennisTourny < Sinatra::Base	
+	set :views, Proc.new { File.join(root, "..", "views") }
+	set :public_folder, settings.root + '/../public/'
+
   get '/' do
     
     erb :index
