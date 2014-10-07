@@ -1,15 +1,21 @@
-# require 'names'
+require 'names'
 
-# describe Competitors do
-# 	let(:competitors) { Competitors.new }
-	
-# 	it 'should have an array with 24 people' do
-# 		expect(competitors.names.count).to eq(24)
-# 	end
+describe Name do
+	let(:name) { Name.new }
+	let(:player) {double :player }
 
-# 	xit 'should be able to sort the names into groups of 6' do
-# 		expect(competitors.sort_groups).to include([])
-# 	end
+	context 'adding players to the tournament' do
+
+		it 'should start with an empty array' do
+			expect(name.names).to be_empty
+		end
+
+		it 'should be able to add players to an array' do
+			expect{name.add(player)}.to change{name.names.count}.by(1) 
+		end
 
 
-# end
+	end
+
+
+end
