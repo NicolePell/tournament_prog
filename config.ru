@@ -1,4 +1,3 @@
-require 'rubygems'
-require File.join(File.dirname(__FILE__), 'lib/tournament.rb')
+require './server'
 
-run TableTennisTourny
+run Sinatra::Application
