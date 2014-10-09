@@ -1,4 +1,5 @@
 require 'data_mapper'
+require 'sinatra'
 
 
 env = ENV["RACK_ENV"] || "development"
@@ -10,4 +11,8 @@ require './lib/player'
 DataMapper.finalize
 
 DataMapper.auto_upgrade!
+
+get '/' do
+	erb :index
+end
 
