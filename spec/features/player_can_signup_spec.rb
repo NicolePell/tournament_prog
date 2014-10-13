@@ -15,6 +15,8 @@ feature "User can sign up" do
 
 	scenario "with a password that doesn't match" do
 		expect{ sign_up('nic@example.com', 'pass', 'wrong')}.to change(Player, :count).by (0)
+		expect(current_path).to eq('/player')
+		expect(page).to have_content("Sorry, your passwords don't match")
 	end
 
 	def sign_up(email = "nic@example.com",

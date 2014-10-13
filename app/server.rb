@@ -1,17 +1,14 @@
 require 'data_mapper'
 require 'sinatra'
+require 'rack-flash'
 require './lib/player'
 require_relative 'data_mapper_setup'
 require_relative 'helpers/application'
 
 
-
-
 enable :sessions
 set :session_secret, 'super secret'
-
-
-
+use Rack::Flash
 
 
 get '/' do
@@ -19,13 +16,19 @@ get '/' do
 end
 
 get '/player/new' do
+	@player = Player.new
   erb :"player/new"
 end
 
 post '/player' do
-	player = Player.create(email: params[:email],
+	@player = Player.new(email: params[:email],
 					password: params[:password],
 					password_confirmation: params[:password_confirmation])
-	session[:player_id] = player.id
-	redirect to('/')
+	if @player.save
+		session[:player_id] = @player.id
+		redirect to('/')
+	else
+		flash[:notice]= "Sorry, your passwords don't match" 
+		erb :"player/new"
+	end
 end
