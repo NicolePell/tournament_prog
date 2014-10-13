@@ -1,0 +1,6 @@
+<body>
+	<% if current_player %>
+		Welcome, <%= current_player.email %>
+		<% end %>
+		<%= yield %>
+</body>
