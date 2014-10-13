@@ -24,7 +24,8 @@ end
 
 post '/player' do
 	player = Player.create(email: params[:email],
-					password: params[:password])
+					password: params[:password],
+					password_confirmation: params[:password_confirmation])
 	session[:player_id] = player.id
 	redirect to('/')
 end

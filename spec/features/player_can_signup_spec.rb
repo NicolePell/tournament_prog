@@ -13,12 +13,18 @@ feature "User can sign up" do
 		expect(Player.first.email).to eq("nic@example.com")
 	end
 
+	scenario "with a password that doesn't match" do
+		expect{ sign_up('nic@example.com', 'pass', 'wrong')}.to change(Player, :count).by (0)
+	end
+
 	def sign_up(email = "nic@example.com",
-		password = "nuts")
+		password = "nuts",
+		password_confirmation = "nuts")
 		visit '/player/new'
 		expect(page.status_code).to eq(200)
 		fill_in :email, with: email
 		fill_in :password, with: password
+		fill_in :password_confirmation, with: password_confirmation
 		click_button "Enter Tournament"
 	end
 
