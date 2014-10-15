@@ -1,3 +1,5 @@
+require_relative '../lib/player.rb'
+
 env = ENV["RACK_ENV"] || "development"
 
 DataMapper.setup(:default, "postgres://localhost/tournament_manager_#{env}")
