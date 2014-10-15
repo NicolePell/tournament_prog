@@ -8,11 +8,11 @@ class Player
 	attr_reader :password
 	attr_accessor :password_confirmation
 
-	validates_confirmation_of :password
+	validates_confirmation_of :password, message: "Sorry, your passwords don't match"
 
 	property :id, Serial
 	property :name, String
-	property :email, String
+	property :email, String, unique: true, message: "This email is already registered"
 	property :games_played, Integer
 	property :games_won, Integer
 	property :score_difference, Integer

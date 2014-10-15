@@ -19,6 +19,12 @@ feature "User can sign up" do
 		expect(page).to have_content("Sorry, your passwords don't match")
 	end
 
+	scenario "with an email that is already registerd" do
+		expect{ sign_up }.to change(Player, :count).by(1)
+		expect{ sign_up }.to change(Player, :count).by(0)
+		expect(page).to have_content("This email is already registered")
+	end
+
 	def sign_up(email = "nic@example.com",
 		password = "nuts",
 		password_confirmation = "nuts")

@@ -28,7 +28,7 @@ post '/player' do
 		session[:player_id] = @player.id
 		redirect to('/')
 	else
-		flash[:notice]= "Sorry, your passwords don't match" 
+		flash[:errors]= @player.errors.full_messages
 		erb :"player/new"
 	end
 end
