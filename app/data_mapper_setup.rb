@@ -1,4 +1,4 @@
-require_relative '../lib/player.rb'
+require_relative './models/player.rb'
 
 env = ENV["RACK_ENV"] || "development"
 
