@@ -1,7 +1,18 @@
+<section class="welcome">	
+	
 	<% if current_player %>
-		Welcome, <%= current_player.email %>
+		Welcome, <%= current_player.name %>
+
     <form method='post' action='/sessions'>
       <input type='hidden' name='_method' value='delete'>
       <input type='submit' value='Sign out'>
-    </form>		
+    </form>
+
+   <% else %>
+
+   		<a href="/player/new" id="sign-up" class="button">Sign up</a>
+   		<a href="/sessions/new" id="sign_in" class="button">Sign in</a>
+
 	<% end %>
+	
+</section>
