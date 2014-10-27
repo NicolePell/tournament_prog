@@ -2,8 +2,8 @@ module SessionHelpers
 
 		def sign_up( name = "nic", 
 			email = "nic@example.com",
-		password = "nuts",
-		password_confirmation = "nuts")
+			password = "nuts",
+			password_confirmation = "nuts")
 		visit '/player/new'
 		expect(page.status_code).to eq(200)
 		fill_in :name, with: name

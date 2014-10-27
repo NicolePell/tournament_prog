@@ -5,7 +5,7 @@ class Player
 
 	include DataMapper::Resource
 
-	attr_reader :password
+	attr_reader :password, :group_assign
 	attr_accessor :password_confirmation
 
 	validates_confirmation_of :password, message: "Sorry, your passwords don't match"
@@ -22,6 +22,8 @@ class Player
 
 	property :password_digest, Text
 
+	before :save, :group_assign
+
 	def password=(password)
 		@password = password
     	self.password_digest = BCrypt::Password.create(password)
@@ -35,5 +37,11 @@ class Player
 				nil
 		end
 	end
+
+	def group_assign
+		groups = ["A", "B", "C", "D"]
+		groups.sample
+	end
+
 
 end

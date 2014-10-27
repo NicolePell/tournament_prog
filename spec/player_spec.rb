@@ -16,7 +16,7 @@ describe Player do
 			expect(Player.count).to eq(1)
 			player = Player.first
 			expect(player.name).to eq("Dan")
-			expect(player.group_assign).to eq("A")
+			expect(["A", "B", "C", "D"].include? player.group_assign).to be true
 		end
 	end
 end
