@@ -29,25 +29,31 @@ Responsiblities|Collaborators
 ---------------|-------------
 Have a name | Game
 Have points | Points
-Knows how many games it's played |
+Knows how many games it's played | Groups
+Knows how many games it's won | 
+Is in a group |
 
-Game
+Groups
 ---------
 Responsiblities|Collaborators
 ---------------|-------------
-Can be won | Player
-Can be lost | 
+Holds the players | Player
+Records player placement in group | Games
+Displays player information | Tournament
+Display player fixtures | 
 
-Points
+Games
 ---------
 Responsiblities|Collaborators
 ---------------|-------------
-Can be counted | Game
-Can be lost | Player
+Holds score | Group
+Processes win/points | Player
+ | Tournament
 
 Tournament
 -----------
 Responsiblities|Collaborators
 ---------------|-------------
-Knows how many players it has | Player
-Knows a player's rank in the tournament | 
+Holds games | Player
+Holds groups | Groups
+ | Players

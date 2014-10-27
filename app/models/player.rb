@@ -27,13 +27,13 @@ class Player
     	self.password_digest = BCrypt::Password.create(password)
   	end
 
-  	def self.authenticate(email, password)
+  def self.authenticate(email, password)
 		player = first(email: email)
-			if player && BCrypt::Password.new(player.password_digest) == password
+		if player && BCrypt::Password.new(player.password_digest) == password
 				player
-			else
+		else
 				nil
-			end
 		end
+	end
 
 end

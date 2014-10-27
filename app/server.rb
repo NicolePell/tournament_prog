@@ -12,14 +12,9 @@ require_relative 'controllers/sessions'
 
 include SessionHelpers
 
+set :views, Proc.new { File.join(root, "views") }
 enable :sessions
 set :session_secret, 'super secret'
 use Rack::Flash
 set :partial_template_engine, :erb
 set :public_folder, 'public'
-
-
-
-
-
-

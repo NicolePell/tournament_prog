@@ -1,18 +1,23 @@
-<section class="welcome">	
+<header>
+	<h1>Makers Table Tennis Tournament</h1>
+
+	<section class="welcome">	
 	
 	<% if current_player %>
-		Welcome, <%= current_player.name %>
+		Welcome, <%= current_player.email %>
 
-    <form method='post' action='/sessions'>
-      <input type='hidden' name='_method' value='delete'>
+    <form method="post" action="/sessions">
+      <input type="hidden" name="_method" value="delete">
       <input type='submit' value='Sign out'>
     </form>
 
    <% else %>
-
+      <h2>Sign up to the Makers Table Tennis Tournament</h2>
    		<a href="/player/new" id="sign-up" class="button">Sign up</a>
    		<a href="/sessions/new" id="sign_in" class="button">Sign in</a>
 
 	<% end %>
-	
-</section>
+
+  </section>
+  
+</header>

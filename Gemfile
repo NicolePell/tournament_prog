@@ -11,4 +11,5 @@ gem 'sinatra-partial'
 group :development, :test do
 	gem 'rspec'
 	gem 'database_cleaner'
+	gem 'launchy'
 end
