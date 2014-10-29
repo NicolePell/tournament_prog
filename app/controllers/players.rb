@@ -4,10 +4,12 @@ get '/player/new' do
 end
 
 post '/player' do
+
 	@player = Player.create(email: params[:email],
 					name: params[:name],
 					password: params[:password],
-					password_confirmation: params[:password_confirmation])
+					password_confirmation: params[:password_confirmation]
+					)
 	if @player.save
 		session[:player_id] = @player.id
 		session[:player_name] = @player.name

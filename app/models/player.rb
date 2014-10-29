@@ -5,7 +5,7 @@ class Player
 
 	include DataMapper::Resource
 
-	attr_reader :password, :group_assign
+	attr_reader :password
 	attr_accessor :password_confirmation
 
 	validates_confirmation_of :password, message: "Sorry, your passwords don't match"
@@ -22,7 +22,8 @@ class Player
 
 	property :password_digest, Text
 
-	before :save, :group_assign
+	before :save, :grp_assign
+		
 
 	def password=(password)
 		@password = password
@@ -38,9 +39,10 @@ class Player
 		end
 	end
 
-	def group_assign
-		groups = ["A", "B", "C", "D"]
-		groups.sample
+	def grp_assign
+		groups = %w(A A A A A A B B B B B B C C C C C C D D D D D D)
+		shuffle_group = groups.shuffle
+		self.group_assign = shuffle_group.pop
 	end
 
 
