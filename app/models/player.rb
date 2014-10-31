@@ -6,8 +6,6 @@ class Player
 
 	include DataMapper::Resource
 
-	has n, :game, through: Resource
-
 	attr_reader :password
 	attr_accessor :password_confirmation
 
@@ -24,6 +22,8 @@ class Player
 
 
 	property :password_digest, Text
+
+	has n, :games, through: Resource
 
 	before :save, :grp_assign
 		

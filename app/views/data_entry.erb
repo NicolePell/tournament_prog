@@ -1,10 +1,11 @@
    
 <h2>Enter game date:</h2>
 
-  <form action="/" method="post">
-  Player 1:<input name="player-name" type="text" value="<%= @player.name %>">
-  Player 2:<input name="player-name" type="text" value="<%= @player.name %>">
-  Player 1 Score:<input name="player-score" type="text" value="<%= @player.games_played %>">
-  Player 2 Score:<input name="player-score" type="text" value="<%= @player.games_played %>">
-  <input type="submit" value="Submit Game">
+  <form action="/data_entry" method="post">
+  Player 1:<input name="player1_name" type="text" value="<%= @game.player1_name %>">
+  Player 2:<input name="player2_name" type="text" value="<%= @game_player2_name %>">
+  Player 1 Score:<input name="player_1_score" type="text" value="<%= @game.player_1_score %>">
+  Player 2 Score:<input name="player_2_score" type="text" value="<%= @game.player_2_score %>">
+  <input type="submit" value="Submit Game Result">
 </form>
+

@@ -19,3 +19,8 @@ post '/player' do
 		erb :"player/new"
 	end
 end
+
+get '/player/profile' do
+	erb :"player/profile"
+
+end
