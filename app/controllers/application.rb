@@ -34,7 +34,11 @@ get '/games' do
 end
 
 get '/players/:name' do
-	@player = params[:name]
+	@player = Player.first(name: params[:name])
+
+	@player1_games = Game.all(player1_name: params[:name])
+	@player2_games = Game.all(player2_name: params[:name])
+
 	
 	erb :"player/profile"
 end
