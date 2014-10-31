@@ -32,3 +32,9 @@ get '/games' do
 	@players = Player.all
 	erb :"games"
 end
+
+get '/players/:name' do
+	@player = params[:name]
+	
+	erb :"player/profile"
+end

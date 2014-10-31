@@ -20,7 +20,15 @@ post '/player' do
 	end
 end
 
-get '/player/profile' do
-	erb :"player/profile"
+# get '/player/profile' do
+# 	@players = Player.all
 
+# 	erb :"player/profile"
+
+# end
+
+get '/player/list' do
+	@players = Player.all
+
+	erb :"player/list"
 end
