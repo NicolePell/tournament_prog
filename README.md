@@ -20,3 +20,40 @@ Programs and Technologies
 - Sinatra
 - HTML5/CSS3
 - Postgresql
+
+CRC Model
+----------
+Player
+---------
+Responsiblities|Collaborators
+---------------|-------------
+Have a name | Game
+Have points | Points
+Knows how many games it's played | Groups
+Knows how many games it's won | 
+Is in a group |
+
+Groups
+---------
+Responsiblities|Collaborators
+---------------|-------------
+Holds the players | Player
+Records player placement in group | Games
+Displays player information | Tournament
+Display player fixtures | 
+
+Games
+---------
+Responsiblities|Collaborators
+---------------|-------------
+Holds score | Group
+Processes win/points | Player
+ | Tournament
+
+Tournament
+-----------
+Responsiblities|Collaborators
+---------------|-------------
+Holds games | Player
+Holds groups | Groups
+ | Players

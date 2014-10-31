@@ -1,8 +1,12 @@
-<h2>Please sign up to join the tournament</h2>
+<h2>Sign up to join the tournament</h2>
 
 <form action="/player" method="post">
   Email: <input name="email" type="text" value="<%= @player.email %>">
+  Name: <input name="name" type="text" value="<%= @player.name %>">
   Password: <input name="password" type="password">
   Password confirmation: <input name="password_confirmation" type="password">
   <input type="submit" value="Enter Tournament">
 </form>
+
+
+

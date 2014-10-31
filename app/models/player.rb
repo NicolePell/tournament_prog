@@ -22,18 +22,28 @@ class Player
 
 	property :password_digest, Text
 
+	before :save, :grp_assign
+		
+
 	def password=(password)
 		@password = password
     	self.password_digest = BCrypt::Password.create(password)
   	end
 
-  	def self.authenticate(email, password)
+  def self.authenticate(email, password)
 		player = first(email: email)
-			if player && BCrypt::Password.new(player.password_digest) == password
+		if player && BCrypt::Password.new(player.password_digest) == password
 				player
-			else
+		else
 				nil
-			end
 		end
+	end
+
+	def grp_assign
+		groups = %w(A A A A A A B B B B B B C C C C C C D D D D D D)
+		shuffle_group = groups.shuffle
+		self.group_assign = shuffle_group.pop
+	end
+
 
 end

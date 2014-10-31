@@ -1,0 +1,114 @@
+	<table class="groups">
+
+
+		<tr class="groups-header">
+			<th>Player</th>
+			<th>Played</th>
+			<th>Won</th>
+			<th>Points</th>
+			<th>Score Difference</th>
+			<th>Group</th>
+		</tr>
+				<% @players.each do |player| %>
+		<% if player.group_assign == "A" %>
+		<tr class="groups-rows">
+			<td class="player-name"><%= player.name %></td>
+			<td class="player-played"><%= player.games_played %></td>
+			<td class="player-won"><%= player.games_won %></td>
+			<td class="player-points"><%= player.points %></td>
+			<td class="player-score-difference"><%= player.score_difference %></td>
+			<td class="group"><%= player.group_assign %></td>
+
+		</tr>
+
+		<% end %>
+	<% end %>
+</table>
+</br>
+</br>
+
+	<table class="groups">
+
+
+		<tr class="groups-header">
+			<th>Player</th>
+			<th>Played</th>
+			<th>Won</th>
+			<th>Points</th>
+			<th>Score Difference</th>
+			<th>Group</th>
+		</tr>
+				<% @players.each do |player| %>
+		<% if player.group_assign == "B" %>
+		<tr class="groups-rows">
+			<td class="player-name"><%= player.name %></td>
+			<td class="player-played"><%= player.games_played %></td>
+			<td class="player-won"><%= player.games_won %></td>
+			<td class="player-points"><%= player.points %></td>
+			<td class="player-score-difference"><%= player.score_difference %></td>
+			<td class="group"><%= player.group_assign %></td>
+
+		</tr>
+
+		<% end %>
+	<% end %>
+</table>
+</br>
+</br>
+
+	<table class="groups">
+
+
+		<tr class="groups-header">
+			<th>Player</th>
+			<th>Played</th>
+			<th>Won</th>
+			<th>Points</th>
+			<th>Score Difference</th>
+			<th>Group</th>
+		</tr>
+				<% @players.each do |player| %>
+		<% if player.group_assign == "C" %>
+		<tr class="groups-rows">
+			<td class="player-name"><%= player.name %></td>
+			<td class="player-played"><%= player.games_played %></td>
+			<td class="player-won"><%= player.games_won %></td>
+			<td class="player-points"><%= player.points %></td>
+			<td class="player-score-difference"><%= player.score_difference %></td>
+			<td class="group"><%= player.group_assign %></td>
+
+		</tr>
+
+		<% end %>
+	<% end %>
+</table>
+</br>
+</br>
+
+	<table class="groups">
+
+
+		<tr class="groups-header">
+			<th>Player</th>
+			<th>Played</th>
+			<th>Won</th>
+			<th>Points</th>
+			<th>Score Difference</th>
+			<th>Group</th>
+		</tr>
+				<% @players.each do |player| %>
+		<% if player.group_assign == "D" %>
+		<tr class="groups-rows">
+			<td class="player-name"><%= player.name %></td>
+			<td class="player-played"><%= player.games_played %></td>
+			<td class="player-won"><%= player.games_won %></td>
+			<td class="player-points"><%= player.points %></td>
+			<td class="player-score-difference"><%= player.score_difference %></td>
+			<td class="group"><%= player.group_assign %></td>
+
+		</tr>
+
+		<% end %>
+	<% end %>
+</table>
+

@@ -3,9 +3,9 @@ require 'spec_helper'
 feature "player signs in" do
 
 	before(:each) do
-    Player.create(:email => "dan@dan.com",
-                	:password => 'test',
-                	:password_confirmation => 'test' )
+    Player.create(email: "dan@dan.com",
+                	password: 'test',
+                	password_confirmation: 'test' )
 	end
 
 	scenario "with correct credentials" do

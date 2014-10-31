@@ -3,10 +3,11 @@ get '/sessions/new' do
 end
 
 post '/sessions' do
-	email, password = params[:email], params[:password]
-	player = Player.authenticate(email, password)
-	if player
-		session[:player_id] = player.id
+	email, password, name = params[:email], params[:password], params[:name]
+	@player = Player.authenticate(email, password)
+	if @player
+		session[:player_id] = @player.id
+		session[:player_name] = @player.name
 		redirect to('/')
 	else
 		flash[:errors] = ["The email or password is incorrect"]
@@ -16,6 +17,7 @@ end
 
 delete '/sessions' do
   flash[:notice] = "Goodbye!"
-  session[:user_id] = nil
+  session[:player_id] = nil
   redirect '/'
 end 
+
