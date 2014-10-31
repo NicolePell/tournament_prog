@@ -1,9 +1,12 @@
 require 'data_mapper'
 require 'bcrypt'
+require_relative 'game'
 
 class Player
 
 	include DataMapper::Resource
+
+	has n, :game, through: Resource
 
 	attr_reader :password
 	attr_accessor :password_confirmation
