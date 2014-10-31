@@ -125,8 +125,12 @@ a {
 	/*background-color: #72b352;*/
 }
 
+th {
+	background-color: #72b352;
+	color: white;
+}
 tr {
-	border-bottom: 2px solid #77b55a;
-	border-top: 2px solid #77b55a;
+	border-bottom: 1px solid #77b55a;
+	border-top: 1px solid #77b55a;
 }
 
