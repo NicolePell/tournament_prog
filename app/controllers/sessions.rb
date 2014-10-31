@@ -20,3 +20,4 @@ delete '/sessions' do
   session[:player_id] = nil
   redirect '/'
 end 
+

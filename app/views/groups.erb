@@ -1,0 +1,16 @@
+<table class="groups">
+	<tr class="groups-header">
+		<th>Player</th>
+		<th>Played</th>
+		<th>Won</th>
+		<th>Points</th>
+	</tr>
+	<% @players.each do |player| %>
+	<tr class="groups-rows">
+		<td class="player-name"><%= player.name %></td>
+		<td class="player-played"><%= player.games_played %></td>
+		<td class="player-won"><%= player.games_won %></td>
+		<td class="player-points"><%= player.points %></td>
+	</tr>
+	<% end %>
+</table>

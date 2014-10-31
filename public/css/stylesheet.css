@@ -114,3 +114,19 @@ a {
 	position:relative;
 	top:1px;
 }
+
+.groups {
+	width: 85%;	
+	letter-spacing: 0.1em;
+	font-family: helvetica, sans-serif;
+	text-align: left;
+	border-top: 2px solid #77b55a;
+	border-bottom: 2px solid #77b55a;
+	/*background-color: #72b352;*/
+}
+
+tr {
+	border-bottom: 2px solid #77b55a;
+	border-top: 2px solid #77b55a;
+}
+
