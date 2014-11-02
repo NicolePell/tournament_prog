@@ -7,6 +7,7 @@ gem 'capybara'
 gem 'bcrypt-ruby'
 gem 'rack-flash3'
 gem 'sinatra-partial'
+gem 'dm-aggregates'
 
 group :development, :test do
 	gem 'rspec'

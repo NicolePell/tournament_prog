@@ -1,5 +1,6 @@
 require 'data_mapper'
 require 'bcrypt'
+require 'dm-aggregates'
 require_relative 'game'
 
 class Player

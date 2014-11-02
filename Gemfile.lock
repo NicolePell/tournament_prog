@@ -110,6 +110,7 @@ DEPENDENCIES
   capybara
   data_mapper
   database_cleaner
+  dm-aggregates
   dm-postgres-adapter
   launchy
   rack-flash3
