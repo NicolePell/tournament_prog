@@ -5,6 +5,7 @@ A web app to manage the an epic table tournament held at Makers Academy during t
 
 Features
 --------
+- Player profile pages
 - Player sign up
 - Game tracking
 - Score tracking
