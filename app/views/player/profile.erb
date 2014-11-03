@@ -6,8 +6,10 @@ Games played:
 	<%= (@player1_games.count + @player2_games.count) %>
 </br>
 
-Games Won:	
+<h3>Games Won:</h3>	
 <%= @player.games_won %>
+<h3>Points:</h3>
+<%= @player.points %>
 
 Player scores:
 <% @games.each do |game| %>
