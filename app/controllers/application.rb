@@ -24,6 +24,11 @@ post '/data_entry' do
 						)
 	@game.players << @player_1
 	@game.players << @player_2
+
+	winner = @game.player_1_score > @game.player_2_score ? @player_1 : @player_2
+	winner.games_won = winner.games_won + 1 
+	winner.save
+
 	@game.save
 
 

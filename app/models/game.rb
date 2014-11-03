@@ -12,6 +12,7 @@ class Game
 	property :player2_name,		String
 	property :player_1_score, 	Integer
 	property :player_2_score, 	Integer
+	property :winner_name,		String
 
 	has n, :players, through: Resource
 

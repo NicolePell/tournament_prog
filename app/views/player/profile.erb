@@ -6,6 +6,9 @@ Games played:
 	<%= (@player1_games.count + @player2_games.count) %>
 </br>
 
+Games Won:	
+<%= @player.games_won %>
+
 Player scores:
 <% @games.each do |game| %>
 		
@@ -19,26 +22,4 @@ Player scores:
 				<% end %>
 		<% end %>
 	<% end %>
-
-</br>
-WIN OR LOSE</br>
-<% @games.each do |game| %>
-	<% if game.player1_name == @player.name %>
-		<% if game.player_1_score > game.player_2_score %>
-			Win
-		<% else %>
-			Lose
-		<% end %>
-	<% end %>
-<% if game.player2_name == @player.name %>
-		<% if game.player_1_score < game.player_2_score %>
-			Win
-			<% else %>
-			Lose
-		<% end %>
-	<% end %>
-<% end %>
-
-
-
 
