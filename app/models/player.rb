@@ -16,7 +16,7 @@ class Player
 	property :name, String
 	property :email, String, unique: true, message: "This email is already registered"
 	property :games_played, Integer
-	property :games_won, Integer
+	property :games_won, Integer, default: 0 
 	property :score_difference, Integer
 	property :points, Integer
 	property :group_assign, String
