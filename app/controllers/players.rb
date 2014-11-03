@@ -4,9 +4,9 @@ get '/player/new' do
 end
 
 post '/player' do
-
+	@name = params[:name].downcase.capitalize!
 	@player = Player.create(email: params[:email],
-					name: params[:name],
+					name: @name,
 					password: params[:password],
 					password_confirmation: params[:password_confirmation]
 					)

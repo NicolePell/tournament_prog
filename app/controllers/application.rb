@@ -14,11 +14,13 @@ end
 
 post '/data_entry' do
 	@player = Player.new
-	@player_1 = Player.first(name: params[:player1_name])
-	@player_2 = Player.first(name: params[:player2_name])
+	@name1 = params[:player1_name].downcase.capitalize!
+	@name2 = params[:player2_name].downcase.capitalize!
+	@player_1 = Player.first(name: @name1)
+	@player_2 = Player.first(name: @name2)
 
-	@game = Game.new(player1_name: params[:player1_name],
-						player2_name: params[:player2_name],
+	@game = Game.new(player1_name: @name1,
+						player2_name: @name2,
 						player_1_score: params[:player_1_score],
 						player_2_score: params[:player_2_score]
 						)
@@ -32,24 +34,8 @@ post '/data_entry' do
 	@game.save
 
 
-	
-
-
-
 	redirect to('/games')	
 end
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 get '/games' do
@@ -65,14 +51,6 @@ get '/players/:name' do
 	@player2_games = Game.all(player2_name: params[:name])
 
 	@games = Game.all
-
-	# @win = @games.each do |game|
-	# 				if game.player1_name == @player.name
-	# 				if game.player_1_score > game.player_2_score
-	# 					@player.update(games_won: 2)
-	# 			end
-	# 		end
-	# 	end
 
 
 	erb :"player/profile"
