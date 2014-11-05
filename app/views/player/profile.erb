@@ -1,27 +1,23 @@
+<ul class="player-scores">
+	<li><h2 class="profile-name"><%= @player.name.capitalize %></h2></li>
+	<li>Games played: <span><%= (@player1_games.count + @player2_games.count) %></span></li>
+	<li>Games won: <span><%= @player.games_won %></span></li>
+	<li>Points: <span><%= @player.points %></span></li>
+</ul>
 
-<%= @player.name.capitalize %>
-</br>
-
-Games played: 
-	<%= (@player1_games.count + @player2_games.count) %>
-</br>
-
-<h3>Games Won:</h3>	
-<%= @player.games_won %>
-<h3>Points:</h3>
-<%= @player.points %>
-
-Player scores:
-<% @games.each do |game| %>
-		
+<section class="player-scores">
+	<ul class="player-scores">
+		<li><h4>Your Game Results</h4></li>
+	<% @games.each do |game| %>
 		<% if game.player1_name == @player.name %>
-			Player score:
-			<%= game.player_1_score %></br>
+			<li><%= @player.name.capitalize %>: <%= game.player_1_score %>
+				<%= game.player2_name %>: <%= game.player_2_score %></li>
 		<% else %>
 			<% if game.player2_name == @player.name %>
-			Player 2 score:
-			<%= game.player_2_score %></br>
-				<% end %>
+				<li><%= game.player2_name %>: <%= game.player_2_score %>
+				<%= game.player1_name %>: <%= game.player_1_score %></li>
+					<% end %>
+			<% end %>
 		<% end %>
-	<% end %>
-
+	</ul>
+</section>

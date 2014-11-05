@@ -1,34 +1,50 @@
-header.welcome {
-	font-family: helvetica, sans-serif;
-	font-size: 1em;
-	padding-left: 1000px;
-}
-
 html{
 	width: 100%;
 	height: 100%;
 }
+
 body {
-	height: 100%;
-	width: 100%;
 	text-align: center;
 	/*background-image: url("/images/makers_ttt.jpg");*/
-	background-repeat: no-repeat;
-	background-position: 50% -80%;
 	font-family: helvetica, sans-serif;
-	margin: 0.5em;
-	/*z-index: 100;*/
+}
+
+header {
+	display: block;
+
+}
+
+nav a {
+	font-family: 'Play', sans-serif;
+	font-size: 1.2em;
+	padding: 1.5em 1.5em;
+	float: left;
 }
 
 h1 {
 	color: black;
-	font-family: helvetica, sans-serif;
-	padding-top: 0.8em;
+	font-family: 'Play', sans-serif;
+	font-size: 3.5em;
+	font-weight: bold;
+	padding: 0.6em 0.5em;
 	text-align: center;
 }
 
-input[type="text"], input[type="password"] {
+h2 {
+	color: #72b352;
+	font-family: 'Play', sans-serif;
+	font-size: 1.3em;
+	padding: 0.5em 0.5em;
+	font-weight: bold;
+}
 
+h4 {
+	font-family: 'Play', sans-serif;
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+input[type="text"], input[type="password"] {
 	height: 0.5em;
 	width: 10em;
 	border-radius: 11px;
@@ -42,7 +58,6 @@ input[type="text"], input[type="password"] {
 }
 
 a {
-	font-family: helvetica, sans-serif;
 	font-size: 1em;
 	text-decoration: none;
 	color: #3e7327;
@@ -73,7 +88,9 @@ a {
 	padding:6px 12px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #5b8a3c;
-	margin: 1.5em;
+	margin: 2em;
+	display: block;
+	float: right;
 }
 
 .button:hover {
@@ -98,7 +115,6 @@ a {
 	text-align: left;
 	border-top: 2px solid #77b55a;
 	border-bottom: 2px solid #77b55a;
-	/*background-color: #72b352;*/
 }
 
 table {
@@ -125,4 +141,20 @@ ul.player-list li a {
 
 ul.player-list li a:hover {
 	background: #f3f2e8;
+}
+
+ul.player-scores li {
+text-align: center;
+margin: auto auto;
+padding: 0.6em;
+border-bottom: 1px solid #77b55a;
+width: 25%;
+}
+
+.player-scores {
+	margin: 2em;
+}
+
+.welcome {
+
 }
