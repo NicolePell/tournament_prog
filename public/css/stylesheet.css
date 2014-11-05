@@ -11,6 +11,7 @@ html{
 body {
 	height: 100%;
 	width: 100%;
+	text-align: center;
 	/*background-image: url("/images/makers_ttt.jpg");*/
 	background-repeat: no-repeat;
 	background-position: 50% -80%;
@@ -24,31 +25,6 @@ h1 {
 	font-family: helvetica, sans-serif;
 	padding-top: 0.8em;
 	text-align: center;
-}
-
-input[type="submit"] {
-	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
-	box-shadow:inset 0px 1px 0px 0px #ffffff;
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f9f9f9), color-stop(1, #e9e9e9));
-	background:-moz-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
-	background:-webkit-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
-	background:-o-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
-	background:-ms-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
-	background:linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#e9e9e9',GradientType=0);
-	background-color:#f9f9f9;
-	-moz-border-radius:11px;
-	-webkit-border-radius:11px;
-	border-radius:10px;
-	border:1px solid #dcdcdc;
-	cursor:pointer;
-	color:#000000;
-	font-family:helvetica, sans-serif;
-	font-size:1em;
-	padding:8px 15px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #ffffff;
 }
 
 input[type="text"], input[type="password"] {
@@ -65,12 +41,12 @@ input[type="text"], input[type="password"] {
 	margin: 1em;
 }
 
-a { 
+a {
 	font-family: helvetica, sans-serif;
 	font-size: 1em;
+	text-decoration: none;
+	color: #3e7327;
 }
-
-
 
 .button {
 	-moz-box-shadow: 0px 10px 14px -7px #3e7327;
@@ -116,13 +92,17 @@ a {
 }
 
 .groups {
-	width: 85%;	
+	width: 95%;
 	letter-spacing: 0.1em;
 	font-family: helvetica, sans-serif;
 	text-align: left;
 	border-top: 2px solid #77b55a;
 	border-bottom: 2px solid #77b55a;
 	/*background-color: #72b352;*/
+}
+
+table {
+	margin: auto auto;
 }
 
 th {
@@ -134,3 +114,15 @@ tr {
 	border-top: 1px solid #77b55a;
 }
 
+ul.player-list li a {
+	text-align: center;
+	display: block;
+	margin: auto auto;
+	padding: 7px;
+	border-bottom: 1px solid #77b55a;
+	width: 25%
+}
+
+ul.player-list li a:hover {
+	background: #f3f2e8;
+}
