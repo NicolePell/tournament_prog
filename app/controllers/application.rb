@@ -13,7 +13,6 @@ get '/data_entry' do
 end
 
 post '/data_entry' do
-	@player = Player.new
 	@name1 = params[:player1_name].downcase.capitalize!
 	@name2 = params[:player2_name].downcase.capitalize!
 	@player_1 = Player.first(name: @name1)
@@ -29,7 +28,7 @@ post '/data_entry' do
 
 
 	winner = @game.player_1_score > @game.player_2_score ? @player_1 : @player_2
-	winner.games_won = winner.games_won + 1 
+	winner.games_won = winner.games_won + 1
 	winner.points = winner.points + 2
 	winner.save
 
@@ -38,10 +37,7 @@ post '/data_entry' do
 
 	@game.save
 
-	
-
-
-	redirect to('/games')	
+	redirect to('/games')
 end
 
 
@@ -53,7 +49,7 @@ end
 
 get '/players/:name' do
 	@player = Player.first(name: params[:name])
-	
+
 	@player1_games = Game.all(player1_name: params[:name])
 	@player2_games = Game.all(player2_name: params[:name])
 

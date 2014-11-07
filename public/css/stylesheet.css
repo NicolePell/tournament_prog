@@ -3,22 +3,21 @@ html{
 	height: 100%;
 }
 
-body {
-	text-align: center;
-	/*background-image: url("/images/makers_ttt.jpg");*/
-	font-family: helvetica, sans-serif;
-}
-
-header {
-	display: block;
-
-}
-
 nav a {
 	font-family: 'Play', sans-serif;
 	font-size: 1.2em;
 	padding: 1.5em 1.5em;
 	float: left;
+}
+
+nav a:hover {
+	background: #f3f2e8;
+}
+
+body {
+	text-align: center;
+	/*background-image: url("/images/makers_ttt.jpg");*/
+	font-family: helvetica, sans-serif;
 }
 
 h1 {
@@ -105,10 +104,10 @@ a {
 }
 .button:active {
 	position:relative;
-	top:1px;
+	top: 1px;
 }
 
-.groups {
+header.groups {
 	width: 95%;
 	letter-spacing: 0.1em;
 	font-family: helvetica, sans-serif;
@@ -119,15 +118,19 @@ a {
 
 table {
 	margin: auto auto;
+	width: 90%;
 }
 
 th {
+	padding: 0.7em;
 	background-color: #72b352;
 	color: white;
 }
+
 tr {
 	border-bottom: 1px solid #77b55a;
 	border-top: 1px solid #77b55a;
+	height: 1.5em;
 }
 
 ul.player-list li a {
@@ -153,8 +156,4 @@ width: 25%;
 
 .player-scores {
 	margin: 2em;
-}
-
-.welcome {
-
 }
