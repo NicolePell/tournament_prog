@@ -3,7 +3,7 @@ get '/' do
 end
 
 get '/groups' do
-	@players = Player.all
+	@players = Player.all(order: [:points.desc])
 	erb :groups
 end
 

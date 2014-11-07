@@ -25,7 +25,7 @@ class Player
 
 	has n, :games, through: Resource
 
-	before :save, :grp_assign
+	before :create, :grp_assign
 
 
 	def password=(password)
@@ -42,10 +42,14 @@ class Player
 		end
 	end
 
+
+# find group with least amount of people
+# then assign player to that group
+# if all the same then randomly place
+
 	def grp_assign
-		groups = %w(A A A A A A B B B B B B C C C C C C D D D D D D)
-		shuffle_group = groups.shuffle
-		self.group_assign = shuffle_group.pop
+		groups = %w(A B C D)
+		self.group_assign = groups.sample
 	end
 
 

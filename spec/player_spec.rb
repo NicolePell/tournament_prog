@@ -10,7 +10,6 @@ describe Player do
 			Player.create(name: "Dan",
 						games_played: 0,
 						games_won: 0,
-						score_difference: 0,
 						points: 0,
 						group_assign: "A")
 			expect(Player.count).to eq(1)
@@ -18,5 +17,6 @@ describe Player do
 			expect(player.name).to eq("Dan")
 			expect(["A", "B", "C", "D"].include? player.group_assign).to be true
 		end
+
 	end
 end
