@@ -4,11 +4,11 @@ require './app/models/player'
 describe Player do
 
 	before do
-		Player.create(name: "Dan",
-					games_played: 0,
-					games_won: 0,
-					points: 0,
-					group_assign: "A")
+		@dan = Player.create(name: "Dan",
+									games_played: 0,
+									games_won: 0,
+									points: 0,
+									group_assign: "A")
 	end
 
 	context "Demonstration of how datamapper works" do
@@ -26,5 +26,7 @@ describe Player do
 			expect(player.group_assign).to eq "A"
 		end
 
+
 	end
+
 end

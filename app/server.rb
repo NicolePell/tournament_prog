@@ -10,6 +10,7 @@ require_relative 'helpers/session'
 require_relative 'controllers/application'
 require_relative 'controllers/players'
 require_relative 'controllers/sessions'
+require_relative 'controllers/finals'
 
 include SessionHelpers
 
@@ -19,4 +20,3 @@ set :session_secret, 'super secret'
 use Rack::Flash
 set :partial_template_engine, :erb
 set :public_folder, 'public'
-

@@ -11,8 +11,6 @@ feature "User can sign up" do
 		expect{ sign_up }.to change(Player, :count).by(1)
 		expect(page).to have_content("Welcome, nic@example.com")
 		expect(Player.first.name).to eq("Nic")
-		Player.group_assign
-		expect(["A", "B", "C", "D"].include? Player.first.group_assign).to be true
 		expect(Player.first.email).to eq("nic@example.com")
 
 	end

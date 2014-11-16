@@ -2,6 +2,7 @@ require 'data_mapper'
 require 'bcrypt'
 require 'dm-aggregates'
 require_relative 'game'
+require_relative 'ttt'
 
 class Player
 
@@ -25,7 +26,10 @@ class Player
 
 	has n, :games, through: Resource
 
-	before :create, :grp_assign
+	before :create do
+		grp_assign = TTT.new.group_min
+		self.group_assign = grp_assign
+	end
 
 
 	def password=(password)
@@ -40,16 +44,6 @@ class Player
 		else
 				nil
 		end
-	end
-
-
-# find group with least amount of people
-# then assign player to that group
-# if all the same then randomly place
-
-	def grp_assign
-		groups = %w(A B C D)
-		self.group_assign = groups.sample
 	end
 
 

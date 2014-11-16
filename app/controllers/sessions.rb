@@ -19,5 +19,4 @@ delete '/sessions' do
   flash[:notice] = "Goodbye!"
   session[:player_id] = nil
   redirect '/'
-end 
-
+end
