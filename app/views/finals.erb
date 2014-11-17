@@ -1,8 +1,10 @@
 
 <body>
-<table summary="Tournament Bracket">
+
+<table id="finals-table">
   <tr>
-    <td><p>Winner Group A</p></td>
+    <td><p>Winner, GroupA: </br>
+      <%= @groupA.all(order: [:points.desc]).first.name %></p></td>
   <td rowspan="2"><p>team name</p></td>
   <td rowspan="4"><p>team name</p></td>
   <td rowspan="8"><p>team name</p></td>
@@ -12,14 +14,16 @@
   <td><p>Runner-up Group B</p></td>
  </tr>
  <tr>
-  <td><p>Winner Group B</p></td>
+  <td><p>Winner Group B: </br>
+  <%= @groupB.all(order: [:points.desc]).first.name %></p></td>
   <td rowspan="2"><p>team name</p></td>
  </tr>
  <tr>
   <td><p>Runner-up Group A</p></td>
  </tr>
  <tr>
-  <td><p>Winner Group C</p></td>
+  <td><p>Winner Group C: </br>
+  <%= @groupC.all(order: [:points.desc]).first.name %></p></td>
   <td rowspan="2"><p>team name</p></td>
   <td rowspan="4"><p>team name</p></td>
  </tr>
@@ -27,38 +31,10 @@
   <td><p>Runner-up Group D</p></td>
  </tr>
  <tr>
-  <td><p>Winner Group D</p></td>
+  <td><p>Winner Group D: </br>
+  <%= @groupD.all(order: [:points.desc]).first.name %></p></td>
   <td rowspan="2"><p>team name</p></td>
  </tr>
  <tr>
   <td><p>Runner-up Group C</p></td>
  </tr>
- <!-- <h2>Semi-finals</h2>
-
-Winner A = groupA.max_by(:points)
-Runner-up B
-
-Winner B
-Runner-up A
-
-Winner C
-Runner-up D
-
-Winner D
-Runner-up C
-
-@players = Player.all(order: [:points.desc])
-
-def group_counts
-  all_players = Player.all
-  groupA = all_players.all(group_assign: "A").count
-  groupB = all_players.all(group_assign: "B").count
-  groupC = all_players.all(group_assign: "C").count
-  groupD = all_players.all(group_assign: "D").count
-  groups_counts = {a: groupA, b: groupB, c: groupC, d: groupD }
-end
-
-def group_min
-  group = [self.group_counts.min_by{|key,value| value}].to_h
-  group.keys[0].to_s.upcase!
-end -->

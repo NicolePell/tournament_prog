@@ -1,7 +1,27 @@
 class TTT
 
+  def all_players
+    Player.all
+  end
+
+  def groupA
+    all_players.all(group_assign: "A")
+  end
+
+  def groupB
+    all_players.all(group_assign: "B")
+  end
+
+  def groupC
+    all_player.all(group_assign: "C")
+  end
+
+  def groupD
+    all_players.all(group_assign: "D")
+  end
+
   def group_counts
-    all_players = Player.all
+    # all_players = Player.all
     groupA = all_players.all(group_assign: "A").count
     groupB = all_players.all(group_assign: "B").count
     groupC = all_players.all(group_assign: "C").count
