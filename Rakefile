@@ -1,5 +1,6 @@
 require 'data_mapper'
-require_relative './app/data_mapper_setup'
+require './app/data_mapper_setup'
+require 'rake'
 
 task :auto_upgrade do
 	DataMapper.auto_upgrade!
