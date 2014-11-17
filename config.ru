@@ -1,4 +1,4 @@
 require 'rubygems'
-require './app/server'
+require './app/server.rb'
 
 run Sinatra::Application
