@@ -12,18 +12,19 @@
 
   <header>
     <h1>Makers Table Tennis Tournament</h1>
+    <%= partial :welcome_message %>
+    <%= partial :flash %>
     <nav>
       <ul>
         <li><a href="/groups">Groups</a></li>
         <li><a href="/games">Results</a></li>
         <li><a href="/player/list">Players</a></li>
+        <li><a href="/finals">Finals</a></li>
       <ul>
     </nav>
   </header>
 
-    <%= partial :welcome_message %>
-    <%= partial :flash %>
-
+    
     <%= yield %>
   </body>
 
