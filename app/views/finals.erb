@@ -4,40 +4,72 @@
 <table id="finals-table">
   <tr>
     <td><p>Winner, GroupA: </br>
-      <%= @groupA.all(order: [:points.desc]).first.name %></p></td>
+      <% if @groupA.empty? %>
+        To be confirmed
+      <% else %>
+        <%= @groupA.all(order: [:points.desc]).first.name %></p></td>
+      <% end %>
   <td rowspan="2"><p>Winner Quarter Final 1</p></td>
   <td rowspan="4"><p>Winner Semi-Final 1</p></td>
   <td rowspan="8"><p>Champion</p></td>
  </tr>
  <tr>
   <td><p>Runner-up Group B</br>
-  <%= @groupB.all(order: [:points.desc])[1].name %></p></td>
+    <% if @groupB.empty? %>
+      To be confirmed
+    <% else %>
+      <%= @groupB.all(order: [:points.desc])[1].name %></p></td>
+    <% end %>
  </tr>
  <tr>
   <td><p>Winner Group B: </br>
-  <%= @groupB.all(order: [:points.desc]).first.name %></p></td>
+    <% if @groupB.empty? %>
+      To be confirmed
+    <% else %>
+      <%= @groupB.all(order: [:points.desc]).first.name %></p></td>
+    <% end %>
   <td rowspan="2"><p>Winner Quarter Final 2</p></td>
  </tr>
  <tr>
   <td><p>Runner-up Group A: </br>
-  <%= @groupA.all(order: [:points.desc])[1].name %></p></td>
+    <% if @groupA.empty? %>
+      To be confirmed
+    <% else %>
+      <%= @groupA.all(order: [:points.desc])[1].name %></p></td>
+    <% end %>
  </tr>
  <tr>
   <td><p>Winner Group C: </br>
-  <%= @groupC.all(order: [:points.desc]).first.name %></p></td>
+    <% if @groupC.empty? %>
+      To be confirmed
+    <% else %>
+      <%= @groupC.all(order: [:points.desc]).first.name %></p></td>
+    <% end %>
   <td rowspan="2"><p>Winner Quarter Final 3</p></td>
   <td rowspan="4"><p>Winner Semi-Final 2</p></td>
  </tr>
  <tr>
   <td><p>Runner-up Group D: </br>
-  <%= @groupD.all(order: [:points.desc])[1].name %></p></td>
+    <% if @groupD.empty? %>
+      To be confirmed
+    <% else %>
+      <%= @groupD.all(order: [:points.desc])[1].name %></p></td>
+    <% end %>
  </tr>
  <tr>
   <td><p>Winner Group D: </br>
-  <%= @groupD.all(order: [:points.desc]).first.name %></p></td>
+    <% if @groupD.empty? %>
+      To be confirmed
+    <% else %>
+      <%= @groupD.all(order: [:points.desc]).first.name %></p></td>
+    <% end %>
   <td rowspan="2"><p>Winner Quarter Final 4</p></td>
  </tr>
  <tr>
   <td><p>Runner-up Group C:
-  <%= @groupC.all(order: [:points.desc])[1].name %></br></p></td>
+    <% if @groupC.empty? %>
+      To be confirmed
+    <% else %>
+      <%= @groupC.all(order: [:points.desc])[1].name %></br></p></td>
+    <% end %>
  </tr>
