@@ -30,7 +30,7 @@ class TTT
   end
 
   def group_min
-    group = [self.group_counts.min_by{|key,value| value}]
+    group = [self.group_counts.min_by{|key,value| value}].flatten
     g = group.to_h
     g.keys[0].to_s.upcase!
   end

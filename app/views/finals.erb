@@ -1,14 +1,23 @@
 
 <body>
 
+
+
 <table id="finals-table">
   <tr>
-    <td><p>Winner, GroupA: </br>
+    <td><p>Quarter Final 1: </br>
+      <p>Winner Group A:
       <% if @groupA.empty? %>
         To be confirmed
       <% else %>
         <%= @groupA.all(order: [:points.desc]).first.name %></p></td>
-      <% end %>
+      <% end %></p>
+      <p>Runner-up Group B:
+        <% if @groupB.empty? %>
+          To be confirmed
+        <% else %>
+          <%= @groupB.all(order: [:points.desc])[1].name %></p></td>
+        <% end %></p>
   <td rowspan="2"><p>Winner Quarter Final 1</p></td>
   <td rowspan="4"><p>Winner Semi-Final 1</p></td>
   <td rowspan="8"><p>Champion</p></td>
