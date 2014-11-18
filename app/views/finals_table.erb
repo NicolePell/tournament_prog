@@ -1,0 +1,70 @@
+<!-- <table id="finals-table">
+  <tr>
+    <td><h3 id="final-headers">Quarter Final 1: </h3>
+      <p><% if @groupA.empty? %>
+        To be confirmed
+      <% else %>
+        <%= @groupA.all(order: [:points.desc]).first.name %>
+      <% end %>
+        Vs.
+      <% if @groupB.empty? %>
+        To be confirmed
+      <% else %>
+        <%= @groupB.all(order: [:points.desc])[1].name %>
+      <% end %></p>
+    </td>
+    <td rowspan="2"><h3 id="final-headers">Semi Final 1: </h3>
+      <p>To be confirmed Vs.To be confirmed</p>
+    </td>
+    <td rowspan="4"><div class="wrap"><h3 id="final-headers">Final: </h3>
+    <p>To be confirmed Vs.To be confirmed</p></div></td>
+  </tr>
+
+  <tr>
+    <td><h3 id="final-headers">Quarter Final 2: </h3>
+      <p><% if @groupB.empty? %>
+        To be confirmed
+      <% else %>
+        <%= @groupB.all(order: [:points.desc]).first.name %>
+      <% end %>
+        Vs.
+      <% if @groupA.empty? %>
+        To be confirmed
+      <% else %>
+        <%= @groupA.all(order: [:points.desc])[1].name %>
+      <% end %></p>
+    </td>
+  </tr>
+  <tr>
+    <td><div class="wrap"><h3 id="final-headers">Quarter Final 3: </h3>
+      <p><% if @groupC.empty? %>
+        To be confirmed
+      <% else %>
+        <%= @groupC.all(order: [:points.desc]).first.name %>
+      <% end %>
+        Vs.
+      <% if @groupD.empty? %>
+        To be confirmed
+      <% else %>
+        <%= @groupD.all(order: [:points.desc])[1].name %>
+      <% end %></div></p>
+    </td>
+    <td rowspan="2"><h3 id="final-headers">Semi Final 2: </h3>
+    <p>To be confirmed Vs. To be confirmed</p></td>
+  </tr>
+  <tr>
+    <td><h3 id="final-headers">Quarter Final 4: </h3>
+      <p><% if @groupD.empty? %>
+        To be confirmed
+      <% else %>
+        <%= @groupD.all(order: [:points.desc]).first.name %>
+      <% end %>
+        Vs.
+      <% if @groupC.empty? %>
+        To be confirmed
+      <% else %>
+        <%= @groupC.all(order: [:points.desc])[1].name %>
+      <% end %></p>
+    </td>
+  </tr>
+</table> -->

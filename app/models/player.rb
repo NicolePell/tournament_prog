@@ -14,7 +14,7 @@ class Player
 	validates_confirmation_of :password, message: "Sorry, your passwords don't match"
 
 	property :id, Serial
-	property :name, String
+	property :name, String, unique: true, message: "This name already exists"
 	property :email, String, unique: true, message: "This email is already registered"
 	property :games_played, Integer, default: 0
 	property :games_won, Integer, default: 0
@@ -27,8 +27,8 @@ class Player
 	has n, :games, through: Resource
 
 	before :create do
-		grp_assign = TTT.new.group_min
-		self.group_assign = grp_assign
+		ttt = TTT.new
+		self.group_assign = ttt.group_min
 	end
 
 

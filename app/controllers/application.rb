@@ -9,8 +9,32 @@ end
 
 get '/data_entry' do
 	@game = Game.new
-	erb :"data_entry"
+	@players = Player.all
+	# @player = current_player
+
+	# name = params[:name]
+
+	# if @player
+	# 	session[:player_name] = @players.all(name: "Alex")
+		erb :"data_entry"
+	# else
+	# 	flash[:notice]
+	# 	redirect to('/')
+	# end
 end
+# email, password, name = params[:email], params[:password], params[:name]
+# @player = Player.authenticate(email, password)
+# if @player
+# 	session[:player_id] = @player.id
+# 	session[:player_name] = @player.name
+# 	redirect to('/')
+# else
+# 	flash[:errors] = ["The email or password is incorrect"]
+# 	erb :"sessions/new"
+# end
+# end
+
+
 
 post '/data_entry' do
 	@name1 = params[:player1_name].downcase.capitalize!

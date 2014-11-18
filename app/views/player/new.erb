@@ -1,12 +1,13 @@
-<h2>Sign up to join the tournament</h2>
+<section class="form-container">
+  <h2 class="sign_up">Sign up to join the tournament</h2>
 
-<form action="/player" method="post">
-  Email: <input name="email" type="text" value="<%= @player.email %>">
-  Name: <input name="name" type="text" value="<%= @player.name %>">
-  Password: <input name="password" type="password">
-  Password confirmation: <input name="password_confirmation" type="password">
-  <input class="button" type="submit" value="Enter Tournament">
-</form>
-
-
-
+  <form class="sign_up" action="/player" method="post">
+    <ul>
+      <li><input name="email" type="text" placeholder="Email" value="<%= @player.email %>"></li>
+      <li><input name="name" type="text" placeholder="Name" value="<%= @player.name %>"></li>
+      <li><input name="password" placeholder="Password" type="password"></li>
+      <li><input name="password_confirmation" placeholder="Password Confirmation" type="password"></li>
+      <li><input class="form_button" type="submit" value="Enter Tournament"></li>
+    </ul>
+  </form>
+</section>

@@ -4,7 +4,7 @@
     <title>Table Tennis Tournament</title>
       <link rel="stylesheet" type="text/css" href="/css/reset.css">
       <link rel="stylesheet" type="text/css" href="/css/stylesheet.css">
-      <link href='http://fonts.googleapis.com/css?family=Play:400,700' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Play:400,700' rel='stylesheet' type='text/css'>
   </head>
 
 
@@ -12,18 +12,33 @@
 
     <header>
       <h1>Makers Table Tennis Tournament</h1>
-      <%= partial :welcome_message %>
-      <%= partial :flash %>
+        <%= partial :welcome_message %>
+        <%= partial :flash %>
+      </header>
+
       <nav>
         <ul>
           <li><a href="/groups">Groups</a></li>
           <li><a href="/games">Results</a></li>
           <li><a href="/player/list">Players</a></li>
           <li><a href="/finals">Finals</a></li>
+          <% if current_player %>
+
+              <form method="post" action="/sessions">
+              <input type="hidden" name="_method" value="delete">
+              <li><input class="button" type='submit' value='Sign out'></li>
+              </form>
+
+           <% else %>
+             <li><a href="/player/new" id="sign-up" class="button">Sign up</a></li>
+             <li><a href="/sessions/new" id="sign_in" class="button">Sign in</a></li>
+
+          <% end %>
         </ul>
       </nav>
-  </header>
+    </header>
     <main>
+
       <%= yield %>
     </main>
 

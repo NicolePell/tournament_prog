@@ -1,10 +1,47 @@
+<% if current_player %>
+  <% if current_player.name == "Dan" %>
 
-<h2>Enter game date:</h2>
+  <section class="form-container">
+    <h2 class="sign_up">Enter game data: </h2>
 
-  <form action="/data_entry" method="post">
-  Player 1:<input name="player1_name" type="text" value="<%= @game.player1_name %>">
-  Player 2:<input name="player2_name" type="text" value="<%= @game_player2_name %>">
-  Player 1 Score:<input name="player_1_score" type="text" value="<%= @game.player_1_score %>">
-  Player 2 Score:<input name="player_2_score" type="text" value="<%= @game.player_2_score %>">
-  <input class="button" type="submit" value="Submit Game Result">
-</form>
+      <form action="/data_entry" method="post">
+        <input name="player1_name" type="text" placeholder="Player 1" value="<%= @game.player1_name %>">
+        <input name="player2_name" type="text" placeholder="Player 2" value="<%= @game_player2_name %>">
+        <input name="player_1_score" type="text" placeholder="Player 1 Score" value="<%= @game.player_1_score %>">
+        <input name="player_2_score" type="text" placeholder="Player 2 Score" value="<%= @game.player_2_score %>">
+        <input class="form_button" type="submit" value="Submit Game Result">
+      </form>
+
+  <% elsif current_player.name == "Nicole" %>
+
+  <section class="form-container">
+    <h2 class="sign_up">Enter game data: </h2>
+
+      <form action="/data_entry" method="post">
+        <input name="player1_name" type="text" placeholder="Player 1" value="<%= @game.player1_name %>">
+        <input name="player2_name" type="text" placeholder="Player 2" value="<%= @game_player2_name %>">
+        <input name="player_1_score" type="text" placeholder="Player 1 Score" value="<%= @game.player_1_score %>">
+        <input name="player_2_score" type="text" placeholder="Player 2 Score" value="<%= @game.player_2_score %>">
+        <input class="form_button" type="submit" value="Submit Game Result">
+      </form>
+
+  <% elsif current_player.name == "Alex f" %>
+
+    <section class="form-container">
+      <h2 class="sign_up">Enter game data: </h2>
+
+        <form action="/data_entry" method="post">
+          <input name="player1_name" type="text" placeholder="Player 1" value="<%= @game.player1_name %>">
+          <input name="player2_name" type="text" placeholder="Player 2" value="<%= @game_player2_name %>">
+          <input name="player_1_score" type="text" placeholder="Player 1 Score" value="<%= @game.player_1_score %>">
+          <input name="player_2_score" type="text" placeholder="Player 2 Score" value="<%= @game.player_2_score %>">
+          <input class="form_button" type="submit" value="Submit Game Result">
+        </form>
+
+    <% else %>
+      <h3>Please see Alex, Dan or Nicole to enter game details.</h3>
+    <% end %>
+
+  <% else %>
+  <h3>Please see Alex, Dan or Nicole to enter game details.</h3>
+<% end %>
