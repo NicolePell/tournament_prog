@@ -2,6 +2,7 @@ Table Tennis Tournament
 ========================
 
 A web app to manage the an epic table tournament held at Makers Academy during the course.
+[Website:] (https://makersttt.herokuapp.com/)
 
 Features
 --------
@@ -10,7 +11,7 @@ Features
 - Game tracking
 - Score tracking
 - Group stage tables
-- Semi/Quarter/Final match tracking 
+- Semi/Quarter/Final match tracking
 
 Programs and Technologies
 -------------------------
@@ -31,7 +32,7 @@ Responsiblities|Collaborators
 Have a name | Game
 Have points | Points
 Knows how many games it's played | Groups
-Knows how many games it's won | 
+Knows how many games it's won |
 Is in a group |
 
 Groups
@@ -41,7 +42,7 @@ Responsiblities|Collaborators
 Holds the players | Player
 Records player placement in group | Games
 Displays player information | Tournament
-Display player fixtures | 
+Display player fixtures |
 
 Games
 ---------
