@@ -3,21 +3,36 @@ html{
 	height: 100%;
 }
 
-nav a {
-	font-family: 'Play', sans-serif;
-	font-size: 1.2em;
-	padding: 1.5em 1.5em;
-	float: left;
+body {
+
+	/*background-image: url("/images/makers_ttt.jpg");*/
+	font-family: helvetica, sans-serif;
 }
 
-nav a:hover {
+nav ul {
+	display: block;
+}
+
+nav ul li {
+	display: inline;
+	font-family: 'Play', sans-serif;
+	font-size: 1.2em;
+}
+
+nav ul li a {
+	padding: 1.5em 1.5em;
+}
+
+nav ul li a:hover {
 	background: #f3f2e8;
 }
 
-body {
+main {
+	margin-top: 3em;
+}
+
+main h3 {
 	text-align: center;
-	/*background-image: url("/images/makers_ttt.jpg");*/
-	font-family: helvetica, sans-serif;
 }
 
 h1 {
@@ -37,10 +52,21 @@ h2 {
 	font-weight: bold;
 }
 
+h3 {
+	font-family: 'Play', sans-serif;
+	font-size: 1.1em;
+	color: #72b352;
+	padding: 0.5em;
+}
+
 h4 {
 	font-family: 'Play', sans-serif;
 	font-size: 1.1em;
 	font-weight: bold;
+}
+
+p {
+	padding-bottom: 0.7em;
 }
 
 input[type="text"], input[type="password"] {
@@ -119,6 +145,7 @@ header.groups {
 table {
 	margin: auto auto;
 	width: 90%;
+
 }
 
 th {
