@@ -10,29 +10,9 @@ end
 get '/data_entry' do
 	@game = Game.new
 	@players = Player.all
-	# @player = current_player
 
-	# name = params[:name]
-
-	# if @player
-	# 	session[:player_name] = @players.all(name: "Alex")
 		erb :"data_entry"
-	# else
-	# 	flash[:notice]
-	# 	redirect to('/')
-	# end
 end
-# email, password, name = params[:email], params[:password], params[:name]
-# @player = Player.authenticate(email, password)
-# if @player
-# 	session[:player_id] = @player.id
-# 	session[:player_name] = @player.name
-# 	redirect to('/')
-# else
-# 	flash[:errors] = ["The email or password is incorrect"]
-# 	erb :"sessions/new"
-# end
-# end
 
 
 
@@ -81,4 +61,19 @@ get '/players/:name' do
 
 
 	erb :"player/profile"
+end
+
+get '/timetable' do
+	@players = Player.all
+
+	@groupA = @players.all(group_assign: "A")
+	@groupB = @players.all(group_assign: "B")
+	@groupC = @players.all(group_assign: "C")
+	@groupD = @players.all(group_assign: "D")
+
+	@groupA_comb = @groupA.combination(2).to_a.each_slice(1).to_a
+	@groupB_comb = @groupB.combination(2).to_a.each_slice(1).to_a
+	@groupC_comb = @groupC.combination(2).to_a.each_slice(1).to_a
+	@groupD_comb = @groupD.combination(2).to_a.each_slice(1).to_a
+	erb :timetable
 end

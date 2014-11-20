@@ -1,0 +1,79 @@
+
+<table class="timetable">
+  <th>Group A Games</th>
+  <th>Player 1</th>
+  <th>Player 2</th>
+  <% (1..@groupA_comb.length).to_a.each do |index| %>
+  <tr>
+    <th>Game <%= index %></th>
+    <% @groupA_comb[index-1].each do |combination| %>
+      <% combination.each do |player| %>
+      <td>
+        <%= player.name %>
+      <% end %>
+
+    </td>
+    <% end %>
+  <% end %>
+</tr>
+</table>
+</br>
+
+<table>
+  <th>Group B Games</th>
+  <th>Player 1</th>
+  <th>Player 2</th>
+  <% (1..@groupB_comb.length).to_a.each do |index| %>
+  <tr>
+    <th>Game <%= index %></th>
+    <% @groupB_comb[index-1].each do |combination| %>
+      <% combination.each do |player| %>
+      <td>
+        <%= player.name %>
+      <% end %>
+
+    </td>
+    <% end %>
+  <% end %>
+</tr>
+</table>
+</br>
+
+<table>
+  <th>Group C Games</th>
+  <th>Player 1</th>
+  <th>Player 2</th>
+  <% (1..@groupC_comb.length).to_a.each do |index| %>
+  <tr>
+    <th>Game <%= index %></th>
+    <% @groupC_comb[index-1].each do |combination| %>
+      <% combination.each do |player| %>
+      <td>
+        <%= player.name %>
+      <% end %>
+
+    </td>
+    <% end %>
+  <% end %>
+</tr>
+</table>
+</br>
+
+<table>
+  <th>Group D Games</th>
+  <th>Player 1</th>
+  <th>Player 2</th>
+  <% (1..@groupD_comb.length).to_a.each do |index| %>
+  <tr>
+    <th>Game <%= index %></th>
+    <% @groupD_comb[index-1].each do |combination| %>
+      <% combination.each do |player| %>
+      <td>
+        <%= player.name %>
+      <% end %>
+
+    </td>
+    <% end %>
+  <% end %>
+</tr>
+</table>
