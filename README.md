@@ -1,5 +1,6 @@
 Table Tennis Tournament
 ========================
+[![Code Climate](https://codeclimate.com/github/NicolePell/tournament_prog/badges/gpa.svg)](https://codeclimate.com/github/NicolePell/tournament_prog)
 
 A web app to manage the an epic table tournament held at Makers Academy during the course.
 [Website:] (https://makersttt.herokuapp.com/)
