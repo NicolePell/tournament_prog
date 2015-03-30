@@ -1,22 +1,20 @@
-
 <table class="results">
-	<tr class="games-header">
-		<th>Player 1</th>
-		<th>Player 2</th>
-		<th>Player 1 Score</th>
-		<th>Player 2 Score</th>
-	</tr>
-		<% @games.each do |game| %>
-			<% game.player1_name %>
-			<% game.player2_name %>
-			<% game.player_1_score %>
-			<% game.player_1_score %>
-	<tr class="games-row">
-		<td class="player-1_name"><%= game.player1_name %></td>
-		<td class="player-2-name"><%= game.player2_name %></td>
-		<td class="player-1-score"><%= game.player_1_score %></td>
-		<td class="player-2-score"><%= game.player_2_score %></td>
-	</tr>
-
-		<% end %>
+  <tr class="games-header">
+    <th>Player 1</th>
+    <th>Player 2</th>
+    <th>Player 1 Score</th>
+    <th>Player 2 Score</th>
+  </tr>
+  <% @games.each do |game| %>
+    <% game.player1_name %>
+    <% game.player2_name %>
+    <% game.player_1_score %>
+    <% game.player_1_score %>
+    <tr class="games-row">
+      <td class="player-1_name"><%= game.player1_name %></td>
+      <td class="player-2-name"><%= game.player2_name %></td>
+      <td class="player-1-score"><%= game.player_1_score %></td>
+      <td class="player-2-score"><%= game.player_2_score %></td>
+    </tr>
+  <% end %>
 </table>

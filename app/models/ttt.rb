@@ -33,5 +33,4 @@ class TTT
     group[0].to_s.upcase!
   end
 
-
 end

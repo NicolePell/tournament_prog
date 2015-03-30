@@ -10,7 +10,7 @@ gem 'sinatra-partial'
 gem 'dm-aggregates'
 
 group :development, :test do
-	gem 'rspec'
-	gem 'database_cleaner'
-	gem 'launchy'
+  gem 'rspec'
+  gem 'database_cleaner'
+  gem 'launchy'
 end

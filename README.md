@@ -16,7 +16,6 @@ Features
 
 Programs and Technologies
 -------------------------
-- Sublime Text 3
 - Ruby
 - Rspec
 - Capybara
